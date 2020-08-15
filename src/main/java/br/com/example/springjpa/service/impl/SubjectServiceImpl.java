@@ -24,7 +24,7 @@ public class SubjectServiceImpl implements SubjectService {
 
     @Override
     public SubjectEntity getOneById(Long id) {
-        return subjectRepository.getOne(id);
+        return subjectRepository.findById(id).get();
     }
 
     @Override

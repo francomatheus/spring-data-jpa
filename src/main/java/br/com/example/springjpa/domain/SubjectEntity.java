@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter
@@ -26,8 +24,6 @@ public class SubjectEntity {
     @Column(name = "code", nullable = false, unique = true)
     private String code;
 
-    @ManyToMany(mappedBy = "subjects")
-    private List<StudentEntity> students = new ArrayList<>();
 }
 
 
