@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,6 +29,10 @@ public class StudentEntity {
     private String email;
     @Column(name = "course")
     private String course;
+
+    @ManyToMany
+    @JoinTable(name = "student_subject")
+    private List<SubjectEntity> subjects = new ArrayList<>();
 
 }
 
